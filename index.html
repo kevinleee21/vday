@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Lareina</title>
+    <style>
+        .title-type {
+            color: white;
+            font-size: 70px;
+        }
+        body {
+            background-color: lightpink;
+            text-align: center; /* Centers text and inline elements */
+        }
+
+        div {
+            position: relative;
+            z-index: 10; /* Ensure main content stays above scattered images */
+        }
+
+        .button {
+            font-size: 20px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .yes-button {
+            background-color: green;
+            color: white;
+        }
+
+        .no-button {
+            background-color: red;
+            color: white;
+        }
+
+        .image-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        iframe {
+            display: block;
+            margin: 0 auto; /* Centers the iframe */
+            max-width: 100%; /* Prevents overflow */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="title" class="title-type">Will you be my valentine?</h1>
+        <iframe src="https://giphy.com/embed/Gpqk76tiVKjn2" width="480" height="360" id="strapped" style="" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <button class="button yes-button" onclick="clickYes()" id="yesButton">Yes</button>
+        <button class="button no-button" onclick="clickNo()" id="noButton">No</button>
+    </div>
+
+    <div class="image-container" id="image-container"></div> <!-- Separate container for scattered images -->
+
+    <script src="main.js" defer></script>
+</body>
+</html>
